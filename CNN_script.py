@@ -31,11 +31,11 @@ print len(path_el)
 ##### Building a Training Data
 print('Reading Training data')
 el_train = []
-for i in range(1,600):
+for i in range(1,5000):
     im = mpimg.imread(ellipse + path_el[i])
     el_train.append(np.ravel(im))
 sp_train = [] 
-for i in range(1,600):
+for i in range(1,5000):
     im = mpimg.imread(spiral + path_sp[i])
     sp_train.append(np.ravel(im))
 print(scale(el_train))
@@ -54,11 +54,11 @@ print('Reading Test Data')
 ######## Building the Test Data
 el_test = []
 sp_test = []
-for i in range(20000,22200):
+for i in range(20000,21000):
     im = mpimg.imread(ellipse + path_el[i])
     el_test.append(np.ravel(im))
 
-for i in range(20000,22200):
+for i in range(20000,21000):
     im = mpimg.imread(spiral + path_sp[i])
     sp_test.append(np.ravel(im))
 ## Creating a training set
